@@ -1,7 +1,7 @@
 addNav('shop')
 addFoot()
 
-var products=JSON.parse(localStorage.getItem('products'))
+var products=JSON.parse(localStorage.getItem('products')) || []
 var search=''
 var cat=[]
 var heartsLocal=JSON.parse(localStorage.getItem('hearts')) || []
@@ -35,33 +35,33 @@ let filter=document.getElementsByClassName('filter')[0]
 });
   }
 
-// let btns=document.querySelectorAll('.filter div')
-// let actives=[]
-// btns.forEach((btn)=>{
-//    btn.addEventListener('click',()=>{
+let btns=document.querySelectorAll('.filter div')
+let actives=[]
+btns.forEach((btn)=>{
+   btn.addEventListener('click',()=>{
       
-//       let atb=btn.getAttribute('category')
-//       if (actives.includes(atb)) {
-//          actives.splice(actives.indexOf(atb),1)
-//          btn.className=''  
-//       }
-//       else{
-//          btn.className="active"
-//          actives.push(atb)        
-//       }
-//       console.log(actives);
-//       let products=document.querySelectorAll('.card')
-//       products.forEach((p)=>{
-//             if ((actives.includes(p.getAttribute('category'))) || actives.length==0) {
-//                p.style.display='flex'
-//             }
-//             else{
-//                p.style.display='none'
-//             }
-//          })
+      let atb=btn.getAttribute('category')
+      if (actives.includes(atb)) {
+         actives.splice(actives.indexOf(atb),1)
+         btn.className=''  
+      }
+      else{
+         btn.className="active"
+         actives.push(atb)        
+      }
+      console.log(actives);
+      let products=document.querySelectorAll('.card')
+      products.forEach((p)=>{
+            if ((actives.includes(p.getAttribute('category'))) || actives.length==0) {
+               p.style.display='flex'
+            }
+            else{
+               p.style.display='none'
+            }
+         })
       
-//    })
-// })
+   })
+})
 
 
 
