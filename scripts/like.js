@@ -2,6 +2,7 @@
 addNav('like')
 addFoot()
 
+
 var products=JSON.parse(localStorage.getItem('products')) || []
 // var heartsLocal=JSON.parse(localStorage.getItem('hearts')) || []
 // var cartsLocal=JSON.parse(localStorage.getItem('carts')) || []
@@ -11,14 +12,13 @@ let cartCount=document.querySelector('.cart-count')
 
 
 var results=[]
-// console.log(heartsLocal);
+console.log(heartsLocal);
 
 getResultes(heartsLocal)
 
 function getResultes(local){
     results=[]
     products.forEach(p => {
-    // console.log(`${p.id}`);
     
     if (local.includes(`${p.id}`)) {
         results.push(p)
@@ -34,6 +34,7 @@ function getResultes(local){
 function addCards(items){
 
   items.forEach(p => {
+    
   
     addCard(p,'likes')
 
@@ -74,7 +75,7 @@ function addCards(items){
     d.remove()
   }
 
-  editeHeartCart()
 
 
+editeHeartCart()
 

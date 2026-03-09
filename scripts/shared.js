@@ -68,7 +68,7 @@ function editeHeartCart(){
 
  function addCard(p,idName){
 
-   if (p.images.length>1) {
+   if (p.images.length>0) {
       
 
     let products=document.getElementById(idName)

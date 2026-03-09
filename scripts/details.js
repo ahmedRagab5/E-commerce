@@ -49,7 +49,8 @@ cart.setAttribute('pid',id)
 editeHeartCart()
 
 let images =document.querySelector('.images')
-details.images.forEach((img)=>{
+if (details.images.length>1) {
+    details.images.forEach((img)=>{
     let div=document.createElement('div')
     let image=document.createElement('img')
     image.src=img
@@ -58,5 +59,6 @@ details.images.forEach((img)=>{
     images.appendChild(div)
 
 })
+}
 
 
