@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/cart.css">
+</head>
+<body>
+    <div id="header">         
+    </div>
+
+    <div class="b">
+        <div class="back" ></div>
+        <div class="container down">
+           
+        <h2 class="head">Shopping cart</h2>
+        <div class="cont row justify-content-between">
+            <div class="cart col-12 col-md-7">
+                <div class="d-none d-md-grid">
+                    <div></div>
+                    <div class="t">Title</div>
+                    <div>Price</div>
+                    <div>Qountity</div>
+                    <div>Total</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="summary ">
+                <h3>Order Summary</h3>
+                <div >
+                    <span>Payable Amount</span>
+                    <span class="pay">1$</span>
+                </div>
+                <div >
+                    <span>Shipping</span>
+                    <span class="ship">1$</span>
+                </div>
+                <div class="order">
+                    <span>Order Total</span>
+                    <span class="order-total">1$</span>
+                </div>
+                <div class="check">
+                    <div onclick="checkout('block')">Checkout</div>
+                </div>
+
+            </div>
+            </div>
+       
+        </div>
+        <div class="confirm">
+            <div class="cancel" onclick="checkout('none')">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h3 class="h3us fw-bold mb-5 text-primary">CHECK OUT</h3>
+            <form class="needs-validation" id="paymentForm" novalidate>
+
+                <div class="row">
+                    <div class="col-12  col-md-6 mb-4">
+                        <label for="userName" class="form-label fw-bold">Name on card</label>
+                        <input type="text" id="userName" class="form-control form-control-lg" placeholder="" required pattern="[A-Za-z\sأ-ي]+" title="Please enter letters only">
+                        <div class="invalid-feedback">The name must contain only letters.</div>
+                    </div>
+                
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="cardNumber" class="form-label fw-bold">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-control form-control-lg" placeholder="" required pattern="[0-9\s]{13,19}">
+                        <div class="invalid-feedback">The card number is incorrect.</div>
+                    </div>
+                
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="expiryDate" class="form-label fw-bold">Expiry Date</label>
+                        <input type="date" id="expiryDate" class="form-control form-control-lg" required>
+                        <div class="invalid-feedback">Valid date required.</div>
+                    </div>
+                
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="cvv" class="form-label fw-bold">CVV</label>
+                        <input type="password" id="cvv" class="form-control form-control-lg" placeholder="" required pattern="[0-9]{3,4}" maxlength="4">
+                        <div class="invalid-feedback">CVV code required.</div>
+                    </div>
+                </div>
+            
+                <div class="payment mt-2 p-3 border rounded shadow-sm bg-light">
+                    <label for="visaSelect" class="form-label fw-bold">Used saved card</label>
+                    <select id="visaSelect" class="form-select form-select-lg">
+                        <option value="visa" selected>💳 Visa Card (**** 4242)</option>
+                        <option value="master">💳 MasterCard (**** 5555)</option>
+                        <option value="paypal">🅿️ PayPal Account</option>
+                        <option value="amex">🏧 American Express</option>
+                    </select>
+                </div>
+            
+                <button  type="submit"  class="btn btn-primary btn-lg w-100 mt-5 fw-bold py-3 shadow">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+
+<div id="footer"></div>
+
+
+
+
+
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="profile">
+        <div class="container mt-5">
+    <div class="card shadow p-4 mx-auto" style="max-width:500px;">
+        
+        <div class="text-center mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                 width="100" class="rounded-circle mb-3">
+            <h3 id="userName"></h3>
+            <p class="text-muted" id="userEmail"></p>
+            <p class="text-muted" id="userPhone"></p>
+            <p class="text-muted" id="userOrders">orders : </p>
+        </div>
+
+        <div class="d-grid gap-2">
+            <!-- <button class="btn btn-primary" onclick="editProfile()">Edit Profile</button> -->
+            <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+</div>
+    </div>
+    <div id="footer"></div>
+
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/profile.js"></script>
+  
+</body>
+</html>

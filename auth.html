@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store Auth</title>
+
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+<div class="auth">
+    <div class="container">
+
+    <!-- LOGIN -->
+    <div id="loginBox">
+        <h2>Login</h2>
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail">
+                <div class="error" id="loginEmailError"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword">
+                <div class="error" id="loginPassError"></div>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="switch">
+            Don't have account? <span onclick="showRegister()">Register</span>
+        </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="registerBox" class="hidden">
+        <h2>Create Account</h2>
+        <form id="registerForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="regName">
+                <div class="error" id="regNameError"></div>
+            </div>
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" id="regPhone">
+                <div class="error" id="regPhoneError"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="regEmail">
+                <div class="error" id="regEmailError"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="regPassword">
+                <div class="error" id="regPassError"></div>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="switch">
+            Already have account? <span onclick="showLogin()">Login</span>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+<div id="footer"></div>
+
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/auth.js"></script>
+
+
+</body>
+</html>

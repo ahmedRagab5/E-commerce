@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+       <div id="header">
+          
+    </div>
+
+    <div class="container">
+      <div class="cont">
+      <div class="contact row">
+        
+        <div class="left col-md-6 col-12">
+            <h2>Let's Chat</h2>
+            <p class="d-none d-md-block">
+                Whether you have a question, simply want to connect.
+            </p>
+            <p class="d-none d-md-block">
+                Feel free to send me a message in the contact form
+            </p>
+        </div>
+
+        <div class="right col-md-6 col-12">
+            <h2>Contact</h2>
+            <form>
+               <input 
+                  id="name"
+                   type="text" 
+                   placeholder="Name"
+                   required
+                   minlength="3"
+                   maxlength="30"
+                   pattern="[A-Za-z\s]+"
+                   title="Name must contain letters only and at least 3 characters">
+
+               <input 
+               id="email"
+                   type="email" 
+                   placeholder="Email"
+                   required
+                   title="Please enter a valid email address">
+           
+               <input 
+                  id="phone"
+                   type="tel" 
+                   placeholder="Phone"
+                   required
+                   pattern="^01[0-2,5]{1}[0-9]{8}$"
+                   title="Enter a valid Egyptian phone number (11 digits)">
+
+               <textarea 
+                  id="message"
+                   placeholder="Message"
+                   required
+                   minlength="10"
+                   maxlength="300"
+                   title="Message must be at least 10 characters"></textarea>
+
+                <button type="submit">SUBMIT</button>
+
+            </form>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+<div id="footer"></div>
+
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+</html>
