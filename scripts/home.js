@@ -1,14 +1,15 @@
 var products= JSON.parse(localStorage.getItem("products"));
-
+// 'https://api.escuelajs.co/api/v1/products'
 if (!(products)) {
-    fetch('https://api.escuelajs.co/api/v1/products')
+    fetch('../data.json')
   .then(r => r.json())
   .then(d => {console.log(d);
     products=d
     localStorage.setItem("products",JSON.stringify(d))
-    location.reload();
+    // location.reload();
   })
   .catch(e => console.log(e));
+// console.log(localStorage.getItem("products"));
 
   products= JSON.parse(localStorage.getItem("products")) || []
 }
