@@ -5,6 +5,7 @@ if (!(products)) {
   .then(r => r.json())
   .then(d => {console.log(d);
     localStorage.setItem("products",JSON.stringify(d))
+    location.reload();
   })
   .catch(e => console.log(e));
 
